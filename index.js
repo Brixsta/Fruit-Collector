@@ -23,7 +23,7 @@ window.onload = () => {
       fruit.addEventListener("dragstart", () => {
         fruit.classList.add("dragging");
         const squish = new Audio();
-        squish.src = "Squish.wav";
+        squish.src = "audio/Squish.wav";
         squish.play();
       });
       fruit.addEventListener("dragend", (e) => {
@@ -45,7 +45,7 @@ window.onload = () => {
   // user clicks create button
   createButton.addEventListener("click", () => {
     const success = new Audio();
-    success.src = "success.wav";
+    success.src = "audio/success.wav";
     if (game.fruitArray.length === 0) {
       return;
     } else if (game.fruitArray.length === 1) {
@@ -83,7 +83,7 @@ window.onload = () => {
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       if (button === filterButtons[0] && !button.classList.contains("active")) {
-        game.fruitArray.push("apple.png");
+        game.fruitArray.push("images/apple.png");
         button.style.backgroundColor = "red";
         button.style.color = "white";
         button.style.border = "2px solid black";
@@ -92,7 +92,7 @@ window.onload = () => {
         button === filterButtons[1] &&
         !button.classList.contains("active")
       ) {
-        game.fruitArray.push("grape.png");
+        game.fruitArray.push("images/grape.png");
         button.style.backgroundColor = "purple";
         button.style.color = "white";
         button.style.border = "2px solid black";
@@ -101,7 +101,7 @@ window.onload = () => {
         button === filterButtons[2] &&
         !button.classList.contains("active")
       ) {
-        game.fruitArray.push("orange.png");
+        game.fruitArray.push("images/orange.png");
         button.style.backgroundColor = "orange";
         button.style.color = "white";
         button.style.border = "2px solid black";
@@ -110,7 +110,7 @@ window.onload = () => {
         button.classList.contains("active") &&
         button === filterButtons[0]
       ) {
-        let newArr = game.fruitArray.filter((i) => i !== "apple.png");
+        let newArr = game.fruitArray.filter((i) => i !== "images/apple.png");
         game.fruitArray = newArr;
         button.style.backgroundColor = "white";
         button.style.color = "rgb(208, 208, 208)";
@@ -120,7 +120,7 @@ window.onload = () => {
         button.classList.contains("active") &&
         button === filterButtons[1]
       ) {
-        let newArr = game.fruitArray.filter((i) => i !== "grape.png");
+        let newArr = game.fruitArray.filter((i) => i !== "images/grape.png");
         game.fruitArray = newArr;
         button.style.backgroundColor = "white";
         button.style.color = "rgb(208, 208, 208)";
@@ -130,7 +130,7 @@ window.onload = () => {
         button.classList.contains("active") &&
         button === filterButtons[2]
       ) {
-        let newArr = game.fruitArray.filter((i) => i !== "orange.png");
+        let newArr = game.fruitArray.filter((i) => i !== "images/orange.png");
         game.fruitArray = newArr;
         button.style.backgroundColor = "white";
         button.style.color = "rgb(208, 208, 208)";
@@ -152,7 +152,7 @@ window.onload = () => {
     game.score++;
     scoreAmt.innerHTML = game.score;
     const dropped = new Audio();
-    dropped.src = "dropped.wav";
+    dropped.src = "audio/dropped.wav";
     dropped.volume = 0.6;
     dropped.play();
     basket.animate(basketWobble, basketWobbleTiming);
