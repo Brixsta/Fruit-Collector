@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 1px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  min-height: 600px;
+  min-width: 1000px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 30px;
+  position: relative;
+  margin-top: -80px;
+}
+
+.controls-container {
+  width: 800px;
+  min-width: 800px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-title {
+  text-align: center;
+  width: 85%;
+}
+
+.filter-button,
+.create-button {
+  font-size: 25px;
+  border: solid 2px rgb(208, 208, 208);
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  border-radius: 30px;
+  background-color: white;
+  color: rgb(208, 208, 208);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in 200ms;
+  width: 150px;
+  height: 50px;
+}
+
+.active {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.filter-container {
+  height: 100%;
+  width: 70%;
+  min-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color: rgb(208, 208, 208);
+}
+.score-title {
+  color: rgb(208, 208, 208);
+  text-align: center;
+  transition: all ease-in 200ms;
+}
+.create-container {
+  width: 30%;
+  min-width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filter-button:hover,
+.create-button:hover {
+  cursor: pointer;
+}
+
+.create-button {
+  color: white;
+  border: 2px solid black;
+  background-color: steelblue;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.plus-minus-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.plus-minus-amt {
+  height: 50px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 11px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  user-select: none;
+  font-size: 20px;
+  user-select: none;
+}
+
+.plus-minus-button {
+  padding: 10px;
+  height: 50px;
+  width: 35%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  font-size: 30px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  user-select: none;
+}
+
+.plus-minus-button:nth-of-type(1) {
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.plus-minus-button:nth-of-type(2) {
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.plus-minus-button:hover {
+  cursor: pointer;
+}
+
+.score-container {
+  width: 200px;
+  min-width: 200px;
+  height: 150px;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score-amt {
+  width: 50%;
+  height: 50px;
+  min-height: 50px;
+  min-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: rgb(208, 208, 208);
+  transition: all ease-in 200ms;
+  padding-top: 25px;
+}
+
+.basket {
+  position: absolute;
+  height: 170px;
+  width: 230px;
+  right: 50px;
+  bottom: 30px;
+  background-image: url("basket1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fruit {
+  height: 80px;
+  width: 80px;
+  background-image: url("apple.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+.fruit:hover {
+  cursor: move;
+}
+
+.dragging {
+  opacity: 0.5;
+}
